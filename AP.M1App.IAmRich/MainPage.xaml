@@ -1,0 +1,44 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.M1App.IAmRich.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
+            <Label 
+                Text="Rich and Succesfull App!"
+                Grid.Row="0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="40"
+                HorizontalOptions="Center" />
+
+            <Image Grid.Row="1"
+                Source="diamond_svgrepo_com.svg"
+                SemanticProperties.Description="Diamond image"
+                WidthRequest="250"
+                HeightRequest="310"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="You are: poor"
+                Grid.Row="2"
+                FontSize="18"
+                FontAttributes="Bold"
+                x:Name="RichState"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Click to get rich!"
+                FontAttributes="Bold"
+                Grid.Row="3"
+                SemanticProperties.Hint="Display rich Info"
+                x:Name="RichStateButton"
+                Clicked="OnRichStateClicked"
+                HorizontalOptions="Center" />
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
